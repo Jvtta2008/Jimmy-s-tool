@@ -99,11 +99,24 @@ def CtrlsColor():
     nurbs = cmds.ls(sl=True)
     letterL = str("_L")
     letterR = str("_R")
-    
+    letterleft = str("left")
+    letterright = str("right")
+    letterRight = str ("Right")
+    letterLeft = str("Left")
+
+
     for item in nurbs:
         if letterL in item:
             LNurbs.append(item)
-    
+
+    for item in nurbs:
+        if letterleft in item:
+            LNurbs.append(item)
+
+    for item in nurbs:
+        if letterLeft in item:
+            LNurbs.append(item)
+
     numberOfL = int(len(LNurbs))
     i = 0
     
@@ -117,7 +130,15 @@ def CtrlsColor():
     for item in nurbs:
         if letterR in item:
             RNurbs.append(item)
-    
+
+    for item in nurbs:
+        if letterRight in item:
+            RNurbs.append(item)
+
+    for item in nurbs:
+        if letterright in item:
+            RNurbs.append(item)
+
     numberOfR = int(len(RNurbs))
     i = 0
     
