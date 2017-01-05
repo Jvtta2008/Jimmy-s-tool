@@ -246,3 +246,6 @@ cmds.tabLayout(tabControls, edit=True, tabLabel=( (t1,"GP tool"),(t2,"GP Oliner"
 # Display the UI
 allowedAreas = ['right', 'left']
 GPdockID = cmds.dockControl(l = "Jimmy's tool v1.0.3", area='left', content=GPwinID, allowedArea=allowedAreas)
+
+def test():
+    return True
