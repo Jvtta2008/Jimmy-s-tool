@@ -62,8 +62,7 @@ def setProjectDir():
     print 'project folder has been set to:', curPath
 
 def quickCheck():
-    GPdockID = "something"
-    if cmds.dockControl(GPdockID, ex=True):
+    if GPdockID:
         cmds.deleteUI(GPdockID)
 
 # start define window UI
@@ -130,7 +129,10 @@ t1_trrlo1_f1 = cmds.frameLayout( label="Scene Setup", collapsable=True )
 t1_trrlo1_f1_lo1 = cmds.rowColumnLayout(nc=3, cat=[1,'right',1], cw = [(1,60),(2,270),(3,20)])
 
 cmds.button(l='set project',w=60, command='setProjectDir()')
-curPth = cmds.textField(text='put link here...')
+
+getLink = cmds.workspace(q=1,dir=1)
+curPth = cmds.textField(text=getLink)
+
 cmds.symbolButton(ann='open folder project', image='GPopenFolder.png',command='cmds.OpenScene()')
         #'end scene Setup section'
 
@@ -246,3 +248,6 @@ cmds.tabLayout(tabControls, edit=True, tabLabel=( (t1,"GP tool"),(t2,"GP Oliner"
 # Display the UI
 allowedAreas = ['right', 'left']
 GPdockID = cmds.dockControl(l = "Jimmy's tool v1.0.3", area='left', content=GPwinID, allowedArea=allowedAreas)
+
+def processUI():
+    print 'GP window UI is loaded sucessfully'
