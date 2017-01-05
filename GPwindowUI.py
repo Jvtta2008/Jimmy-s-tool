@@ -213,7 +213,6 @@ def Rename():
         cmds.rename(b[0],part1 + "_" + part2 + "_" + part3 + str(i)+"Shape")
         i = i + 1
 
-
 cmds.button(label='Rename', command='Rename()')
 cmds.button(label='Group.Name', command='RenameViaGroup()')
 cmds.button(label='Auto Rename', command='autoRenaming()')
