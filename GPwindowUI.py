@@ -251,3 +251,4 @@ GPdockID = cmds.dockControl(l = "Jimmy's tool v1.0.3", area='left', content=GPwi
 
 def processUI():
     print 'GP window UI is loaded sucessfully'
+
