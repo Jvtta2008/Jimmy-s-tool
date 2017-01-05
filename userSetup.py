@@ -1,4 +1,3 @@
 import maya.cmds as cmds
-
-import sys sys.path.append( r'C/Users/panda/Documents/maya/2016/scripts' )
-
+if not cmds.commandPort(':7002', q=True):
+    cmds.commandPort(n=':7002')

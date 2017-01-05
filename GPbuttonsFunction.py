@@ -296,6 +296,8 @@ def deselectGround():
             i = i + 1
 
 def openVrayVFB():
+    cmds.loadPlugin("vrayformaya")
+    cmds.pluginInfo('vrayformaya', edit=True, autoload=True)
     cmds.setAttr("defaultRenderGlobals.currentRenderer", "vray", type="string")
     cmds.vray("showVFB")
 
@@ -307,7 +309,7 @@ def autoAssignMat():
     deselectShapeNode()
     #deselect group
     deselectGroup()
-    #deselect light
+    #deselect lightmaya
     deselectLight()
     #deselect cam
     deselectCam()
